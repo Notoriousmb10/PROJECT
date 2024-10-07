@@ -1,48 +1,81 @@
-# Vite Project
 
+SIM Card Management System
 This project is a SIM card management system built with a Vite frontend and a Node.js backend. The system allows users to activate, deactivate, and get details of SIM cards.
 
+Table of Contents
+Prerequisites
+Backend Setup
+Frontend Setup
+Usage
+API Endpoints
+Activate SIM Card
+Deactivate SIM Card
+Get SIM Details
+Prerequisites
+Before you begin, ensure you have the following installed:
 
+Node.js
+MongoDB
+Backend Setup
+Navigate to the Backend directory:
 
-## Prerequisites
+bash
+Copy code
+cd Backend
+Install the dependencies:
 
-- Node.js
-- MongoDB
+bash
+Copy code
+npm install
+Start the MongoDB server:
 
-## Backend
+bash
+Copy code
+npm start
+Frontend Setup
+Navigate to the Frontend directory:
 
-1. Navigate to the `Backend` directory:
-   
-   cd Backend
+bash
+Copy code
+cd Frontend
+Install the dependencies:
 
-2. Install the dependencies:
+bash
+Copy code
+npm install
+Start the development server:
 
-    npm install
+bash
+Copy code
+npm run dev
+Open your browser and navigate to http://localhost:5173. Use the interface to activate, deactivate, and get details of SIM cards.
 
-3. Start the MongoDB server:
+Usage
+After setting up both the backend and frontend, you can interact with the system through the provided user interface. You can perform the following actions:
 
-    npm start
-
-4. Navigate to the Frontend directory:
-    cd Frontend
-    npm install
-    npm run dev
-
-    Open your browser and navigate to http://localhost:5173.
-Use the interface to activate, deactivate, and get details of SIM cards.
-
-
+Activate a SIM Card
+Deactivate a SIM Card
+Get Details of a SIM Card
 API Endpoints
 Activate SIM Card
 URL: /api/activate
 Method: POST
-Request Body: { "simNumber": "1234567890", "phoneNumber": "9876543210" }
-
+Request Body:
+json
+Copy code
+{
+  "simNumber": "1234567890",
+  "phoneNumber": "9876543210"
+}
 Deactivate SIM Card
 URL: /api/deactivate
 Method: POST
-Body:  { "simNumber": "1234567890" }
-
+Request Body:
+json
+Copy code
+{
+  "simNumber": "1234567890"
+}
 Get SIM Details
 URL: /api/sim-details/:simNumber
 Method: GET
